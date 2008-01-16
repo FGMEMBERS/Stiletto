@@ -1,0 +1,283 @@
+<?xml version="1.0"?>
+
+<PropertyList>
+
+  <path>panel.ac</path>
+
+  <animation>
+    <object-name>tableau</object-name>
+  </animation>
+
+  <model>
+    <path>Aircraft/Stiletto/Models/Panel/Instruments/empty/grandvide.xml</path>
+    <offsets>
+      <x-m> -0.186 </x-m>
+      <y-m> -0.231 </y-m>
+      <z-m>  0.272 </z-m>
+    </offsets>
+  </model>
+
+  <!-- Altimètre -->
+  <model>
+    <path>Aircraft/Stiletto/Models/Panel/Instruments/altimeter/altimeter.xml</path>
+    <offsets>
+      <x-m> -0.186 </x-m>
+      <y-m> -0.116 </y-m>
+      <z-m>  0.272 </z-m>
+    </offsets>
+  </model>
+
+  <!-- Horizon artificiel -->
+  <model>
+    <path>Aircraft/Stiletto/Models/Panel/Instruments/ai/ai.xml</path>
+    <offsets>
+      <x-m> -0.186 </x-m>
+      <y-m>  0.000 </y-m>
+      <z-m>  0.272 </z-m>
+    </offsets>
+  </model>
+
+  <!-- Turn -->
+  <model>
+    <path>Aircraft/Stiletto/Models/Panel/Instruments/turn/turn.xml</path>
+    <offsets>
+      <x-m> -0.186 </x-m>
+      <y-m>  0.116 </y-m>
+      <z-m>  0.272 </z-m>
+    </offsets>
+  </model>
+
+  <!-- Heading -->
+  <model>
+    <path>Aircraft/Stiletto/Models/Panel/Instruments/hdg/hdg.xml</path>
+    <offsets>
+      <x-m> -0.186 </x-m>
+      <y-m>  0.231 </y-m>
+      <z-m>  0.272 </z-m>
+    </offsets>
+  </model>
+
+  <!-- ********************************* -->
+  <model>
+    <path>Aircraft/Stiletto/Models/Panel/Instruments/empty/petitvide.xml</path>
+    <offsets>
+      <x-m> -0.186 </x-m>
+      <y-m> -0.337 </y-m>
+      <z-m>  0.171 </z-m>
+    </offsets>
+  </model>
+
+  <model>
+    <path>Aircraft/Stiletto/Models/Panel/Instruments/empty/petitvide.xml</path>
+    <offsets>
+      <x-m> -0.186 </x-m>
+      <y-m> -0.261 </y-m>
+      <z-m>  0.171 </z-m>
+    </offsets>
+  </model>
+
+  <model>
+    <path>Aircraft/Stiletto/Models/Panel/Instruments/empty/petitvide.xml</path>
+    <offsets>
+      <x-m> -0.186 </x-m>
+      <y-m> -0.186 </y-m>
+      <z-m>  0.171 </z-m>
+    </offsets>
+  </model>
+
+  <model>
+    <path>Aircraft/Stiletto/Models/Panel/Instruments/empty/petitvide.xml</path>
+    <offsets>
+      <x-m> -0.186 </x-m>
+      <y-m> -0.112 </y-m>
+      <z-m>  0.171 </z-m>
+    </offsets>
+  </model>
+
+  <!-- ********************************* -->
+  <model>
+    <path>Aircraft/Stiletto/Models/Panel/Instruments/empty/petitvide.xml</path>
+    <offsets>
+      <x-m> -0.186 </x-m>
+      <y-m> -0.337 </y-m>
+      <z-m>  0.096 </z-m>
+    </offsets>
+  </model>
+
+  <model>
+    <path>Aircraft/Stiletto/Models/Panel/Instruments/empty/petitvide.xml</path>
+    <offsets>
+      <x-m> -0.186 </x-m>
+      <y-m> -0.261 </y-m>
+      <z-m>  0.096 </z-m>
+    </offsets>
+  </model>
+
+  <model>
+    <path>Aircraft/Stiletto/Models/Panel/Instruments/empty/petitvide.xml</path>
+    <offsets>
+      <x-m> -0.186 </x-m>
+      <y-m> -0.186 </y-m>
+      <z-m>  0.096 </z-m>
+    </offsets>
+  </model>
+
+  <model>
+    <path>Aircraft/Stiletto/Models/Panel/Instruments/empty/petitvide.xml</path>
+    <offsets>
+      <x-m> -0.186 </x-m>
+      <y-m> -0.112 </y-m>
+      <z-m>  0.096 </z-m>
+    </offsets>
+  </model>
+
+  <!-- ********************************* -->
+  <model>
+    <path>Aircraft/Stiletto/Models/Panel/Instruments/empty/petitvide.xml</path>
+    <offsets>
+      <x-m> -0.186 </x-m>
+      <y-m> -0.337 </y-m>
+      <z-m>  0.021 </z-m>
+    </offsets>
+  </model>
+
+  <model>
+    <path>Aircraft/Stiletto/Models/Panel/Instruments/empty/petitvide.xml</path>
+    <offsets>
+      <x-m> -0.186 </x-m>
+      <y-m> -0.261 </y-m>
+      <z-m>  0.021 </z-m>
+    </offsets>
+  </model>
+
+  <model>
+    <path>Aircraft/Stiletto/Models/Panel/Instruments/empty/petitvide.xml</path>
+    <offsets>
+      <x-m> -0.186 </x-m>
+      <y-m> -0.186 </y-m>
+      <z-m>  0.021 </z-m>
+    </offsets>
+  </model>
+
+  <model>
+    <path>Aircraft/Stiletto/Models/Panel/Instruments/empty/petitvide.xml</path>
+    <offsets>
+      <x-m> -0.186 </x-m>
+      <y-m> -0.112 </y-m>
+      <z-m>  0.021 </z-m>
+    </offsets>
+  </model>
+
+  <!-- -->
+  <!-- ********************************* -->
+  <model>
+    <path>Aircraft/Stiletto/Models/Panel/Instruments/empty/petitvide.xml</path>
+    <offsets>
+      <x-m> -0.186 </x-m>
+      <y-m>  0.337 </y-m>
+      <z-m>  0.171 </z-m>
+    </offsets>
+  </model>
+
+  <model>
+    <path>Aircraft/Stiletto/Models/Panel/Instruments/empty/petitvide.xml</path>
+    <offsets>
+      <x-m> -0.186 </x-m>
+      <y-m>  0.261 </y-m>
+      <z-m>  0.171 </z-m>
+    </offsets>
+  </model>
+
+  <model>
+    <path>Aircraft/Stiletto/Models/Panel/Instruments/empty/petitvide.xml</path>
+    <offsets>
+      <x-m> -0.186 </x-m>
+      <y-m>  0.186 </y-m>
+      <z-m>  0.171 </z-m>
+    </offsets>
+  </model>
+
+  <model>
+    <path>Aircraft/Stiletto/Models/Panel/Instruments/empty/petitvide.xml</path>
+    <offsets>
+      <x-m> -0.186 </x-m>
+      <y-m>  0.112 </y-m>
+      <z-m>  0.171 </z-m>
+    </offsets>
+  </model>
+
+  <!-- ********************************* -->
+  <model>
+    <path>Aircraft/Stiletto/Models/Panel/Instruments/empty/petitvide.xml</path>
+    <offsets>
+      <x-m> -0.186 </x-m>
+      <y-m>  0.337 </y-m>
+      <z-m>  0.096 </z-m>
+    </offsets>
+  </model>
+
+  <model>
+    <path>Aircraft/Stiletto/Models/Panel/Instruments/empty/petitvide.xml</path>
+    <offsets>
+      <x-m> -0.186 </x-m>
+      <y-m>  0.261 </y-m>
+      <z-m>  0.096 </z-m>
+    </offsets>
+  </model>
+
+  <model>
+    <path>Aircraft/Stiletto/Models/Panel/Instruments/empty/petitvide.xml</path>
+    <offsets>
+      <x-m> -0.186 </x-m>
+      <y-m>  0.186 </y-m>
+      <z-m>  0.096 </z-m>
+    </offsets>
+  </model>
+
+  <model>
+    <path>Aircraft/Stiletto/Models/Panel/Instruments/empty/petitvide.xml</path>
+    <offsets>
+      <x-m> -0.186 </x-m>
+      <y-m>  0.112 </y-m>
+      <z-m>  0.096 </z-m>
+    </offsets>
+  </model>
+
+  <!-- ********************************* -->
+  <model>
+    <path>Aircraft/Stiletto/Models/Panel/Instruments/empty/petitvide.xml</path>
+    <offsets>
+      <x-m> -0.186 </x-m>
+      <y-m>  0.337 </y-m>
+      <z-m>  0.021 </z-m>
+    </offsets>
+  </model>
+
+  <model>
+    <path>Aircraft/Stiletto/Models/Panel/Instruments/empty/petitvide.xml</path>
+    <offsets>
+      <x-m> -0.186 </x-m>
+      <y-m>  0.261 </y-m>
+      <z-m>  0.021 </z-m>
+    </offsets>
+  </model>
+
+  <model>
+    <path>Aircraft/Stiletto/Models/Panel/Instruments/empty/petitvide.xml</path>
+    <offsets>
+      <x-m> -0.186 </x-m>
+      <y-m>  0.186 </y-m>
+      <z-m>  0.021 </z-m>
+    </offsets>
+  </model>
+
+  <model>
+    <path>Aircraft/Stiletto/Models/Panel/Instruments/empty/petitvide.xml</path>
+    <offsets>
+      <x-m> -0.186 </x-m>
+      <y-m>  0.112 </y-m>
+      <z-m>  0.021 </z-m>
+    </offsets>
+  </model>
+
+</PropertyList>

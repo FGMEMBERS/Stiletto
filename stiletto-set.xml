@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+
+<!-- <PropertyList include="vimy-jsbsim-set.xml"> -->
+<PropertyList include="stiletto-yasim-set.xml">
+
+  <sim>
+    <description>Douglas X 3 Stiletto (YASim)</description>
+    <author>BARANGER Emmanuel (3D), AJ (FDM)</author>
+  </sim>
+
+</PropertyList>
+

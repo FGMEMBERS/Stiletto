@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<!--
+************************************************************************
+Douglas X3 Stiletto
+July 2007 BARANGER Emmanuel
+************************************************************************
+-->
+
+<PropertyList include="stiletto-base.xml">
+
+  <sim>
+
+    <description>Douglas X 3 Stiletto (YASim)</description>
+    <flight-model>yasim</flight-model>
+    <aero>stiletto-yasim</aero>
+
+  </sim>
+    
+</PropertyList>

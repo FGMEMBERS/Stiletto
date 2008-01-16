@@ -1,0 +1,77 @@
+<?xml version="1.0"?>
+
+<PropertyList>
+
+  <sim include="Nasal/views.xml">
+ 
+    <author>BARANGER Emmanuel (3D), AJ (FDM)</author>
+    <aircraft-version>0.1</aircraft-version>
+    <status>Alpha</status>
+   
+    <fuel-fraction>0.8</fuel-fraction>
+  
+    <startup>
+      <splash-texture>Aircraft/Stiletto/stiletto-splash.rgb</splash-texture>
+    </startup>
+
+    <model>
+      <path>Aircraft/Stiletto/Models/stiletto.xml</path>
+    </model>
+
+    <sound>
+      <path>Aircraft/Stiletto/Sounds/stiletto-sound.xml</path>
+    </sound>
+
+    <virtual-cockpit>true</virtual-cockpit>
+    <allow-toggle-cockpit>true</allow-toggle-cockpit>
+
+    <multiplay>
+      <chat_display>1</chat_display>
+    </multiplay>
+
+    <flaps>
+      <setting>0.000</setting>
+      <setting>0.25</setting>
+      <setting>0.50</setting>
+      <setting>0.75</setting>
+      <setting>1.000</setting>
+    </flaps>
+
+  </sim>
+
+  <controls>
+    <engines>
+      <engine n="0">
+        <magnetos>3</magnetos>
+      </engine>
+      <engine n="1">
+        <magnetos>3</magnetos>
+      </engine>
+    </engines>
+  </controls>
+
+  <engines>
+    <engine n="0">
+      <engine-num type="int">0</engine-num>
+      <rpm>500</rpm>
+      <running>true</running>
+    </engine>
+    <engine n="1">
+      <engine-num type="int">1</engine-num>
+      <rpm>500</rpm>
+      <running>true</running>
+    </engine>
+  </engines>
+
+  <input>
+    <keyboard include="Nasal/stiletto-keyboard.xml"/>
+  </input>
+ 
+  <nasal>
+    <stiletto>
+      <file>Aircraft/Stiletto/Nasal/doors.nas</file>
+    </stiletto>
+  </nasal>
+
+</PropertyList>
+
