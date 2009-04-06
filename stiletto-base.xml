@@ -1,4 +1,4 @@
-<?xml version="1.0"?>
+<?xml version="1.0" encoding="UTF-8"?>
 
 <PropertyList>
 
@@ -11,7 +11,7 @@
     <fuel-fraction>0.8</fuel-fraction>
   
     <startup>
-      <splash-texture>Aircraft/Stiletto/stiletto-splash.rgb</splash-texture>
+      <splash-texture>Aircraft/Stiletto/stiletto-splash.png</splash-texture>
     </startup>
 
     <model>
@@ -70,6 +70,8 @@
   <nasal>
     <stiletto>
       <file>Aircraft/Stiletto/Nasal/doors.nas</file>
+      <file>Aircraft/Stiletto/Nasal/liveries.nas</file>
+      <file>Aircraft/Stiletto/Nasal/light.nas</file>
     </stiletto>
   </nasal>
 

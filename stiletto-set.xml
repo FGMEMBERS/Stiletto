@@ -1,7 +1,7 @@
-<?xml version="1.0"?>
+<?xml version="1.0" encoding="UTF-8"?>
 
-<!-- <PropertyList include="vimy-jsbsim-set.xml"> -->
-<PropertyList include="stiletto-yasim-set.xml">
+<!-- <PropertyList include="stiletto-jsbsim-cnf.xml"> -->
+<PropertyList include="stiletto-yasim-cnf.xml">
 
   <sim>
     <description>Douglas X 3 Stiletto (YASim)</description>

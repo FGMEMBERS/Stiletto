@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<PropertyList>
+
+  <path>interior.ac</path>
+
+  <animation>
+    <object-name>interieur</object-name>
+    <object-name>tours</object-name>
+
+    <object-name>siege</object-name>
+    <object-name>pilote</object-name>
+
+    <object-name>intvitres</object-name>
+  </animation>
+
+  <animation>
+    <type>noshadow</type>
+    <object-name>intvitres</object-name>
+  </animation>
+
+  <animation>
+    <type>shader</type>
+    <shader>chrome</shader>
+    <texture>shader.png</texture>
+    <object-name>intvitres</object-name>
+  </animation>
+
+  <!-- Planches de bord -->
+  <model>
+    <path>Aircraft/Stiletto/Models/Interior/Panel/panel.xml</path>
+    <offsets>
+      <x-m> -2.843 </x-m>
+      <y-m>  0.000 </y-m>
+      <z-m> -0.493 </z-m>
+    </offsets>
+  </model>
+
+  <animation>
+    <name>LePilote</name>
+    <object-name>siege</object-name>
+    <object-name>pilote</object-name>
+  </animation>
+
+  <animation>
+    <type>translate</type>
+    <object-name>LePilote</object-name>
+    <property>/instrumentation/doors/crew/position-norm</property>
+    <factor> -0.8 </factor>
+    <axis>
+      <x> 0.000 </x>
+      <y> 0.000 </y>
+      <z> 1.000 </z>
+    </axis>
+  </animation>
+
+</PropertyList>

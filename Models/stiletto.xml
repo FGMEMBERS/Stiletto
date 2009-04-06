@@ -1,15 +1,23 @@
-<?xml version="1.0"?>
+<?xml version="1.0" encoding="UTF-8"?>
 
 <PropertyList>
 
   <path>stiletto.ac</path>
+
+  <nasal>
+    <load>
+      var livery_update = aircraft.livery_update.new("Aircraft/Stiletto/Models/Liveries", 10);
+    </load>
+    <unload>
+      livery_update.stop();
+    </unload>
+  </nasal>
 
   <animation>
     <!-- Objets opaques -->
     <object-name>fuselage</object-name>
     <object-name>dessus</object-name>
     <object-name>trappe</object-name>
-    <object-name>interieur</object-name>
     <object-name>aile</object-name>
     <object-name>aileronG</object-name>
     <object-name>aileronD</object-name>
@@ -28,44 +36,143 @@
     <object-name>axeDH</object-name>
     <object-name>axeDB</object-name>
     <object-name>roueD</object-name>
-    <object-name>siege</object-name>
-    <object-name>pilote</object-name>
     <object-name>manche</object-name>
     <object-name>porteBG</object-name>
     <object-name>porteHG</object-name>
     <object-name>porteBD</object-name>
     <object-name>porteHD</object-name> 
+    <object-name>sorties</object-name> 
 
     <!-- Objets transparents -->
-    <object-name>vitre</object-name>
+    <object-name>vitres</object-name>
   </animation>
 
   <animation>
     <type>noshadow</type>
-    <object-name>vitre</object-name>
+    <object-name>vitres</object-name>
   </animation>
 
-  <!-- Planches de bord -->
+  <animation>
+    <type>material</type>
+    <object-name>fuselage</object-name>
+    <object-name>dessus</object-name>
+    <object-name>trappe</object-name>
+    <object-name>aile</object-name>
+    <object-name>aileronG</object-name>
+    <object-name>aileronD</object-name>
+    <object-name>voletG</object-name>
+    <object-name>voletD</object-name>
+    <object-name>profondeur</object-name>
+    <object-name>derive</object-name>
+    <object-name>direction</object-name>
+    <object-name>axeA</object-name>
+    <object-name>axeB</object-name>
+    <object-name>roueA</object-name>
+    <object-name>porteA</object-name>
+    <object-name>axeGH</object-name>
+    <object-name>axeGB</object-name>
+    <object-name>roueG</object-name>
+    <object-name>axeDH</object-name>
+    <object-name>axeDB</object-name>
+    <object-name>roueD</object-name>
+    <object-name>manche</object-name>
+    <object-name>porteBG</object-name>
+    <object-name>porteHG</object-name>
+    <object-name>porteBD</object-name>
+    <object-name>porteHD</object-name> 
+    <object-name>sorties</object-name> 
+
+    <property-base>sim/model/livery</property-base>
+    <texture-prop>texture</texture-prop>
+    <texture>texture.png</texture>
+<!--
+    <diffuse>
+      <red-prop>diffuse/red</red-prop>
+      <green-prop>diffuse/green</green-prop>
+      <blue-prop>diffuse/blue</blue-prop>
+    </diffuse>
+
+    <ambient>
+      <red-prop>ambient/red</red-prop>
+      <green-prop>ambient/green</green-prop>
+      <blue-prop>ambient/blue</blue-prop>
+    </ambient>
+-->
+    <specular>
+      <red-prop>specular/red</red-prop>
+      <green-prop>specular/green</green-prop>
+      <blue-prop>specular/blue</blue-prop>
+    </specular>
+
+    <emission>
+      <red-prop>emission/red</red-prop>
+      <green-prop>emission/green</green-prop>
+      <blue-prop>emission/blue</blue-prop>
+    </emission>
+<!--
+    <shininess>
+      <shininess-prop>shininess</shininess-prop>
+    </shininess>
+-->
+  </animation>
+
+  <!-- Les flammes -->
+  <!-- Gauche -->
   <model>
-    <path>Aircraft/Stiletto/Models/Panel/panel.xml</path>
+    <path>Aircraft/Stiletto/Models/effects/flammes/flammesG.xml</path>
     <offsets>
-      <x-m> -2.843 </x-m>
-      <y-m>  0.000 </y-m>
-      <z-m> -0.493 </z-m>
+      <x-m>  6.057 </x-m>
+      <y-m> -0.455 </y-m>
+      <z-m> -0.568 </z-m>
     </offsets>
   </model>
 
-  <!-- Pilote invisible depuis le cockpit -->
-  <animation>
-    <type>select</type>
-    <object-name>pilote</object-name>
-    <condition>
-      <greater-than>
-        <property>sim/current-view/view-number</property>
-        <value>0</value>
-      </greater-than>
-    </condition>
-  </animation>
+  <!-- Droite -->
+  <model>
+    <path>Aircraft/Stiletto/Models/effects/flammes/flammesD.xml</path>
+    <offsets>
+      <x-m>  6.057 </x-m>
+      <y-m>  0.455 </y-m>
+      <z-m> -0.568 </z-m>
+    </offsets>
+  </model>
+
+  <!-- Particules OSG -->
+  <!-- Gauche -->
+  <model>
+    <path>Aircraft/ME-262/Models/effects/trailL.xml</path>
+    <offsets>
+      <x-m>  6.057 </x-m>
+      <y-m> -0.455 </y-m>
+      <z-m> -0.568 </z-m>
+      <roll-deg>    0.000 </roll-deg>
+      <pitch-deg>   0.000 </pitch-deg>
+      <heading-deg> 0.000 </heading-deg>
+    </offsets>
+  </model>
+
+  <!-- Droite -->
+  <model>
+    <path>Aircraft/ME-262/Models/effects/trailR.xml</path>
+    <offsets>
+      <x-m>  6.057 </x-m>
+      <y-m>  0.455 </y-m>
+      <z-m> -0.568 </z-m>
+      <roll-deg>    0.000 </roll-deg>
+      <pitch-deg>   0.000 </pitch-deg>
+      <heading-deg> 0.000 </heading-deg>
+    </offsets>
+  </model>
+
+  <!-- Interieur -->
+  <model>
+    <path>Aircraft/Stiletto/Models/Interior/interior.xml</path>
+    <offsets>
+      <x-m> 0 </x-m>
+      <y-m> 0 </y-m>
+      <z-m> 0 </z-m>
+    </offsets>
+  </model>
 
   <!-- Gouverne de profondeur -->
   <animation>
@@ -589,19 +696,6 @@
       <x2-m> -2.715 </x2-m>
       <y2-m>  0.352 </y2-m>
       <z2-m> -0.944 </z2-m>
-    </axis>
-  </animation>
-
-  <animation>
-    <type>translate</type>
-    <object-name>siege</object-name>
-    <object-name>pilote</object-name>
-    <property>instrumentation/doors/crew/position-norm</property>
-    <factor> -0.8 </factor>
-    <axis>
-      <x> 0.000 </x>
-      <y> 0.000 </y>
-      <z> 1.000 </z>
     </axis>
   </animation>
 
