@@ -9,7 +9,6 @@
     <object-name>tours</object-name>
 
     <object-name>siege</object-name>
-    <object-name>pilote</object-name>
 
     <object-name>intvitres</object-name>
   </animation>
@@ -22,7 +21,7 @@
   <animation>
     <type>shader</type>
     <shader>chrome</shader>
-    <texture>shader.png</texture>
+    <texture>Aircraft/Generic/Effects/glass_shader.png</texture>
     <object-name>intvitres</object-name>
   </animation>
 
@@ -36,10 +35,21 @@
     </offsets>
   </model>
 
+  <!-- Pilote -->
+  <model>
+    <name>Pilote</name>
+    <path>Aircraft/Stiletto/Models/Pilot/pilot.xml</path>
+    <offsets>
+      <x-m> -2.682 </x-m>
+      <y-m>  0.000 </y-m>
+      <z-m> -0.400 </z-m>
+    </offsets>
+  </model>
+
   <animation>
     <name>LePilote</name>
     <object-name>siege</object-name>
-    <object-name>pilote</object-name>
+    <object-name>Pilote</object-name>
   </animation>
 
   <animation>

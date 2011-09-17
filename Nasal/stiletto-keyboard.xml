@@ -2,14 +2,14 @@
 
 <PropertyList>
 
-   <key n="100">
+  <key n="100">
     <name>d</name>
     <desc>Canopy</desc>
     <binding>
-     <command>nasal</command>
-     <script>stiletto.doorsystem.crewexport();</script>
+      <command>nasal</command>
+      <script>doors.doorsystem.crewexport();</script>
     </binding>
-   </key>
+  </key>
 
 </PropertyList>
 

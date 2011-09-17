@@ -116,7 +116,11 @@
   </jet>
 
   <!-- nose -->
-  <gear x="3.748" y="0.000" z="-1.940" retract-time="7" compression="0.44" spring="1.1" damp="1.4">
+  <gear x="3.748" y="0.000" z="-1.940"
+        retract-time="7"
+        compression="0.44"
+        spring="1.1"
+        damp="1.4">
         <control-input axis="/controls/flight/rudder" control="STEER" square="false"/>
         <control-input axis="/controls/gear/gear-down" control="EXTEND"/>
 
@@ -126,7 +130,10 @@
   </gear>
 
   <!-- left main -->
-  <gear x="-2.186" y="0.937" z="-1.940" retract-time="7" compression="0.72" spring="0.85" damp="2">
+  <gear x="-2.186" y="0.937" z="-1.940"
+        retract-time="7"
+        compression="0.72"
+        spring="0.85" damp="2">
         <control-input axis="/controls/gear/brake-left" control="BRAKE"/>
         <control-input axis="/controls/gear/brake-parking" control="BRAKE"/>
         <control-input axis="/controls/gear/gear-down" control="EXTEND"/>
@@ -137,7 +144,11 @@
   </gear>
 
   <!-- right main -->
-  <gear x="-2.186" y="-0.937" z="-1.940" retract-time="7" compression="0.72" spring="0.85" damp="2">
+  <gear x="-2.186" y="-0.937" z="-1.940"
+        retract-time="7"
+        compression="0.72"
+        spring="0.85"
+        damp="2">
         <control-input axis="/controls/gear/brake-right" control="BRAKE"/>
         <control-input axis="/controls/gear/brake-parking" control="BRAKE"/>
         <control-input axis="/controls/gear/gear-down" control="EXTEND"/>
