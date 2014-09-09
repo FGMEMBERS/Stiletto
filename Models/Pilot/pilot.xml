@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<PropertyList>
+
+  <path>pilot.ac</path>
+
+  <animation>
+    <!-- Objets opaques -->
+    <object-name>corps</object-name>
+    <object-name>visage</object-name>
+    <object-name>casque</object-name>
+    <object-name>bottes</object-name>
+    <object-name>lunettes</object-name>
+
+    <!-- Objets transparents -->
+  </animation>
+
+</PropertyList>
+

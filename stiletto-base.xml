@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<PropertyList>
+
+  <sim include="Nasal/views.xml">
+ 
+    <author>BARANGER Emmanuel (3D), AJ (FDM)</author>
+    <aircraft-version>0.1</aircraft-version>
+    <status>Alpha</status>
+   
+    <fuel-fraction>0.8</fuel-fraction>
+  
+    <startup>
+      <splash-texture>Aircraft/Stiletto/stiletto-splash.png</splash-texture>
+    </startup>
+
+    <model>
+      <path>Aircraft/Stiletto/Models/stiletto.xml</path>
+    </model>
+
+    <sound>
+      <path>Aircraft/Stiletto/Sounds/stiletto-sound.xml</path>
+    </sound>
+
+    <virtual-cockpit>true</virtual-cockpit>
+    <allow-toggle-cockpit>true</allow-toggle-cockpit>
+
+    <multiplay>
+      <chat_display>1</chat_display>
+      <generic> 
+        <int type="int" n="0">  0 </int>                                            <!-- 0 immat -->
+        <int type="int" n="1">  0 </int>                                            <!-- 1 immat -->
+        <int type="int" n="2">  0 </int>                                            <!-- 2 immat -->
+        <int type="int" n="3">  0 </int>                                            <!-- 3 immat -->
+        <int type="int" n="4">  0 </int>                                            <!-- 4 immat -->
+        <int type="int" n="5">  0 </int>                                            <!-- 5 immat -->
+        <int type="bool" n="6"> 1 </int>                                            <!-- 6 smoke/bomb/torpedo -->
+        <int type="int" n="7">  0 </int>                                            <!-- 7 color -->
+        <int type="bool" n="8" alias="/controls/lighting/nav-lights">  0 </int>     <!-- 8 nav-lights -->
+        <int type="double" n="9" alias="/sim/model/lights/beacon/state"> 0 </int>   <!-- 9 beacon-lights -->
+        <int type="double" n="10" alias="/sim/model/lights/strobe/state"> 0 </int>  <!--10 strobe-lights -->
+        <int type="bool" n="11" alias="/controls/lighting/landing-lights"> 0 </int> <!--11 landing-lights -->
+        <int n="12" alias="/controls/electric/key-pos">  0 </int>                   <!--12 key position -->
+        <float n="2" alias="/position/gear-agl-m">  0 </float>                      <!--2 altitude for MP shadow -->
+        <float n="0" alias="/instrumentation/doors/crew/position-norm"/>
+        <float n="1" alias="/instrumentation/doors/passenger/position-norm"/>
+      </generic>
+    </multiplay>
+
+    <flaps>
+      <setting>0.000</setting>
+      <setting>0.25</setting>
+      <setting>0.50</setting>
+      <setting>0.75</setting>
+      <setting>1.000</setting>
+    </flaps>
+
+  </sim>
+
+  <controls>
+    <engines>
+      <engine n="0">
+        <magnetos>3</magnetos>
+      </engine>
+      <engine n="1">
+        <magnetos>3</magnetos>
+      </engine>
+    </engines>
+  </controls>
+
+  <engines>
+    <engine n="0">
+      <engine-num type="int">0</engine-num>
+      <rpm>500</rpm>
+      <running>true</running>
+    </engine>
+    <engine n="1">
+      <engine-num type="int">1</engine-num>
+      <rpm>500</rpm>
+      <running>true</running>
+    </engine>
+  </engines>
+
+  <input>
+    <keyboard include="Nasal/stiletto-keyboard.xml"/>
+  </input>
+ 
+  <nasal>
+    <doors>
+      <file>Aircraft/Stiletto/Nasal/doors.nas</file>
+    </doors>
+    <stiletto>
+      <file>Aircraft/Stiletto/Nasal/liveries.nas</file>
+      <file>Aircraft/Stiletto/Nasal/light.nas</file>
+    </stiletto>
+  </nasal>
+
+</PropertyList>
+
