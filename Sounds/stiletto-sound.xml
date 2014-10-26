@@ -1,9 +1,41 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="ISO-8859-1"?>
 
 <PropertyList>
-
+  
   <fx>
-
+    
+    <!-- Engine 1 -->
+    <engine>
+      <name>engine-start</name>
+      <mode>once</mode>
+      <path>Aircraft/Stiletto/Sounds/starter.wav</path>
+      <condition>
+        <property>/controls/engines/engine[0]/starter</property>
+      </condition>
+      <volume>
+        <property>engines/engine[0]/thrust-lbs</property>
+        <factor>0.000012</factor>
+        <min>0.1</min>
+        <max>0.2</max>
+      </volume>
+      <reference-dist>100</reference-dist>
+      <max-dist>1000</max-dist>
+    </engine>
+    
+    <engine>
+      <name>engine-shutdown</name>
+      <mode>once</mode>
+      <path>Sounds/turbine_shutdown.wav</path>
+      <condition>
+        <property>/controls/engines/engine[0]/cutoff</property> 
+      </condition>
+      <volume>
+        <factor>0.2</factor>
+      </volume>
+      <reference-dist>100</reference-dist>
+      <max-dist>1000</max-dist>
+    </engine>
+    
     <engine>
       <name>engine</name>
       <path>Sounds/jet.wav</path>
@@ -22,7 +54,7 @@
       <reference-dist>100</reference-dist>
       <max-dist>1000</max-dist>
     </engine>
-
+    
     <engine>
       <name>whine</name>
       <path>Sounds/turbojet_fan.wav</path>
@@ -42,7 +74,39 @@
       <reference-dist>100</reference-dist>
       <max-dist>1000</max-dist>
     </engine>
-
+       
+    <!-- Engine 2 -->
+    <engine>
+      <name>engine-start</name>
+      <mode>once</mode>
+      <path>Aircraft/Stiletto/Sounds/starter.wav</path>
+      <condition>
+        <property>/controls/engines/engine[1]/starter</property>
+      </condition>
+      <volume>
+        <property>engines/engine[1]/thrust-lbs</property>
+        <factor>0.000012</factor>
+        <min>0.1</min>
+        <max>0.2</max>
+      </volume>
+      <reference-dist>100</reference-dist>
+      <max-dist>1000</max-dist>
+    </engine>
+    
+    <engine>
+      <name>engine-shutdown</name>
+      <mode>once</mode>
+      <path>Sounds/turbine_shutdown.wav</path>
+      <condition>
+        <property>/controls/engines/engine[1]/cutoff</property> 
+      </condition>
+      <volume>
+        <factor>0.2</factor>
+      </volume>
+      <reference-dist>100</reference-dist>
+      <max-dist>1000</max-dist>
+    </engine>
+    
     <engine>
       <name>engine</name>
       <path>Sounds/jet.wav</path>
@@ -61,7 +125,7 @@
       <reference-dist>100</reference-dist>
       <max-dist>1000</max-dist>
     </engine>
-
+    
     <engine>
       <name>whine</name>
       <path>Sounds/turbojet_fan.wav</path>
@@ -81,7 +145,7 @@
       <reference-dist>100</reference-dist>
       <max-dist>1000</max-dist>
     </engine>
-
+    
     <rumble>
       <name>rumble</name>
       <mode>looped</mode>
@@ -100,7 +164,7 @@
       <reference-dist>100</reference-dist>
       <max-dist>1000</max-dist>
     </rumble>
-
+    
     <rumble>
       <name>rumble</name>
       <mode>looped</mode>
@@ -116,7 +180,7 @@
       <reference-dist>100</reference-dist>
       <max-dist>1000</max-dist>
     </rumble>
-
+    
     <rumble>
       <name>rumble</name>
       <mode>looped</mode>
@@ -132,7 +196,7 @@
       <reference-dist>100</reference-dist>
       <max-dist>1000</max-dist>
     </rumble>
-
+    
     <gear>
       <name>gear</name>
       <mode>in-transit</mode>
@@ -146,7 +210,7 @@
       <reference-dist>100</reference-dist>
       <max-dist>1000</max-dist>
     </gear>
-
+    
     <gear>
       <name>gear-lock</name>
       <path>Sounds/gear-lck.wav</path>
@@ -159,7 +223,7 @@
       <reference-dist>100</reference-dist>
       <max-dist>1000</max-dist>
     </gear>
-
+    
     <gear>
       <name>gear-lock</name>
       <path>Sounds/gear-lck.wav</path>
@@ -172,7 +236,7 @@
       <reference-dist>100</reference-dist>
       <max-dist>1000</max-dist>
     </gear>
-
+    
     <gear>
       <name>gear</name>
       <mode>in-transit</mode>
@@ -186,7 +250,7 @@
       <reference-dist>100</reference-dist>
       <max-dist>1000</max-dist>
     </gear>
-
+    
     <gear>
       <name>gear-lock</name>
       <path>Sounds/gear-lck.wav</path>
@@ -199,7 +263,7 @@
       <reference-dist>100</reference-dist>
       <max-dist>1000</max-dist>
     </gear>
-
+    
     <gear>
       <name>gear-lock</name>
       <path>Sounds/gear-lck.wav</path>
@@ -212,7 +276,7 @@
       <reference-dist>100</reference-dist>
       <max-dist>1000</max-dist>
     </gear>
-
+    
     <gear>
       <name>gear</name>
       <mode>in-transit</mode>
@@ -226,7 +290,7 @@
       <reference-dist>100</reference-dist>
       <max-dist>1000</max-dist>
     </gear>
-
+    
     <gear>
       <name>gear-lock</name>
       <path>Sounds/gear-lck.wav</path>
@@ -239,7 +303,7 @@
       <reference-dist>100</reference-dist>
       <max-dist>1000</max-dist>
     </gear>
-
+    
     <gear>
       <name>gear-lock</name>
       <path>Sounds/gear-lck.wav</path>
@@ -252,7 +316,7 @@
       <reference-dist>100</reference-dist>
       <max-dist>1000</max-dist>
     </gear>
-
+    
     <squeal>
       <name>squeal</name>
       <path>Sounds/squeal.wav</path>
@@ -280,7 +344,7 @@
       <reference-dist>100</reference-dist>
       <max-dist>1000</max-dist>
     </squeal>
-
+    
     <squeal>
       <name>squeal</name>
       <path>Sounds/squeal.wav</path>
@@ -308,7 +372,7 @@
       <reference-dist>100</reference-dist>
       <max-dist>1000</max-dist>
     </squeal>
-
+    
     <squeal>
       <name>squeal</name>
       <path>Sounds/squeal.wav</path>
@@ -336,7 +400,7 @@
       <reference-dist>100</reference-dist>
       <max-dist>1000</max-dist>
     </squeal>
-
+    
     <flap>
       <name>flaps</name>
       <mode>in-transit</mode>
@@ -348,7 +412,7 @@
       <reference-dist>100</reference-dist>
       <max-dist>1000</max-dist>
     </flap>
-
+    
     <flap>
       <name>flaps</name>
       <mode>in-transit</mode>
@@ -360,7 +424,7 @@
       <reference-dist>100</reference-dist>
       <max-dist>1000</max-dist>
     </flap>
-
+    
     <spoiler>
       <name>spoilers</name>
       <mode>in-transit</mode>
@@ -372,7 +436,7 @@
       <reference-dist>100</reference-dist>
       <max-dist>1000</max-dist>
     </spoiler>
-
+    
     <spoiler>
       <name>spoilers</name>
       <mode>in-transit</mode>
@@ -384,7 +448,7 @@
       <reference-dist>100</reference-dist>
       <max-dist>1000</max-dist>
     </spoiler>
-
+    
     <spoiler>
       <name>spoilers</name>
       <mode>in-transit</mode>
@@ -396,7 +460,7 @@
       <reference-dist>100</reference-dist>
       <max-dist>1000</max-dist>
     </spoiler>
-
+    
     <spoiler>
       <name>spoilers</name>
       <mode>in-transit</mode>
@@ -408,7 +472,7 @@
       <reference-dist>100</reference-dist>
       <max-dist>1000</max-dist>
     </spoiler>
-
+    
     <wind>
       <name>wind</name>
       <mode>looped</mode>
@@ -428,7 +492,7 @@
       <reference-dist>100</reference-dist>
       <max-dist>1000</max-dist>
     </wind>
-
+    
     <stall>
       <name>stall</name>
       <path>Sounds/stall.wav</path>
@@ -440,7 +504,7 @@
       <reference-dist>100</reference-dist>
       <max-dist>1000</max-dist>
     </stall>
-
+    
   </fx>
-
+  
 </PropertyList>
