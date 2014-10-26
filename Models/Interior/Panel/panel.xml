@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="ISO-8859-1"?>
 
 <PropertyList>
 
@@ -8,276 +8,392 @@
     <object-name>panel</object-name>
   </animation>
 
+  <!-- ASI -->
   <model>
-    <path>Aircraft/Stiletto/Models/Interior/Panel/Instruments/empty/grandvide.xml</path>
+    <path>Aircraft/Stiletto/Models/Interior/Panel/Instruments/asi/asi.xml</path>
     <offsets>
-      <x-m> -0.186 </x-m>
-      <y-m> -0.231 </y-m>
-      <z-m>  0.272 </z-m>
+      <x-m> -0.190 </x-m>
+      <y-m> -0.110 </y-m>
+      <z-m>  0.380 </z-m>
     </offsets>
   </model>
-
-  <!-- Altimètre -->
+  
+  <!-- MACH -->
   <model>
-    <path>Aircraft/Stiletto/Models/Interior/Panel/Instruments/altimeter/altimeter.xml</path>
+    <path>Aircraft/Stiletto/Models/Interior/Panel/Instruments/mach/mach.xml</path>
     <offsets>
-      <x-m> -0.186 </x-m>
-      <y-m> -0.116 </y-m>
-      <z-m>  0.272 </z-m>
+      <x-m> -0.190 </x-m>
+      <y-m>  0.000 </y-m>
+      <z-m>  0.380 </z-m>
     </offsets>
   </model>
-
-  <!-- Horizon artificiel -->
+  
+  <!-- GMETER -->
+  <model>
+    <path>Aircraft/Stiletto/Models/Interior/Panel/Instruments/gmeter/gmeter.xml</path>
+    <offsets>
+      <x-m> -0.190 </x-m>
+      <y-m>  0.110 </y-m>
+      <z-m>  0.380 </z-m>
+    </offsets>
+  </model>
+  
+  <!-- RPM -->
+  <model>
+    <path>Aircraft/Stiletto/Models/Interior/Panel/Instruments/rpm/rpm.xml</path>
+    <offsets>
+      <x-m> -0.190 </x-m>
+      <y-m> -0.222 </y-m>
+      <z-m>  0.270 </z-m>
+    </offsets>
+  </model>
+  
+  <!-- ALT -->
+  <model>
+    <path>Aircraft/Stiletto/Models/Interior/Panel/Instruments/alt/alt.xml</path>
+    <offsets>
+      <x-m> -0.190 </x-m>
+      <y-m> -0.110 </y-m>
+      <z-m>  0.270 </z-m>
+    </offsets>
+  </model>
+  
+  <!-- AI -->
   <model>
     <path>Aircraft/Stiletto/Models/Interior/Panel/Instruments/ai/ai.xml</path>
     <offsets>
-      <x-m> -0.186 </x-m>
+      <x-m> -0.190 </x-m>
       <y-m>  0.000 </y-m>
-      <z-m>  0.272 </z-m>
+      <z-m>  0.270 </z-m>
     </offsets>
   </model>
-
-  <!-- Turn -->
+  
+  <!-- TURN -->
   <model>
     <path>Aircraft/Stiletto/Models/Interior/Panel/Instruments/turn/turn.xml</path>
     <offsets>
-      <x-m> -0.186 </x-m>
-      <y-m>  0.116 </y-m>
-      <z-m>  0.272 </z-m>
+      <x-m> -0.190 </x-m>
+      <y-m>  0.110 </y-m>
+      <z-m>  0.270 </z-m>
     </offsets>
   </model>
-
-  <!-- Heading -->
+  
+  <!-- HDG -->
   <model>
     <path>Aircraft/Stiletto/Models/Interior/Panel/Instruments/hdg/hdg.xml</path>
     <offsets>
-      <x-m> -0.186 </x-m>
-      <y-m>  0.231 </y-m>
-      <z-m>  0.272 </z-m>
+      <x-m> -0.190 </x-m>
+      <y-m>  0.222 </y-m>
+      <z-m>  0.270 </z-m>
     </offsets>
   </model>
-
-  <!-- ********************************* -->
+  
+  <!-- FLAPS -->
   <model>
-    <path>Aircraft/Stiletto/Models/Interior/Panel/Instruments/empty/petitvide.xml</path>
+    <path>Aircraft/Stiletto/Models/Interior/Panel/Instruments/flaps/flap.xml</path>
     <offsets>
-      <x-m> -0.186 </x-m>
-      <y-m> -0.337 </y-m>
-      <z-m>  0.171 </z-m>
+      <x-m> -0.190 </x-m>
+      <y-m> -0.340 </y-m>
+      <z-m>  0.176 </z-m>
     </offsets>
   </model>
-
+  
   <model>
-    <path>Aircraft/Stiletto/Models/Interior/Panel/Instruments/empty/petitvide.xml</path>
+    <path>Aircraft/Stiletto/Models/Interior/Panel/Instruments/flaps/flap.xml</path>
     <offsets>
-      <x-m> -0.186 </x-m>
-      <y-m> -0.261 </y-m>
-      <z-m>  0.171 </z-m>
+      <x-m> -0.190 </x-m>
+      <y-m> -0.340 </y-m>
+      <z-m>  0.097 </z-m>
     </offsets>
   </model>
-
+  
+  <!-- CLOCK -->
   <model>
-    <path>Aircraft/Stiletto/Models/Interior/Panel/Instruments/empty/petitvide.xml</path>
+    <path>Aircraft/Stiletto/Models/Interior/Panel/Instruments/clock/clock.xml</path>
     <offsets>
-      <x-m> -0.186 </x-m>
-      <y-m> -0.186 </y-m>
-      <z-m>  0.171 </z-m>
+      <x-m> -0.190 </x-m>
+      <y-m> -0.340 </y-m>
+      <z-m>  0.019 </z-m>
     </offsets>
   </model>
-
+  
+  <!-- EMPTY -->
   <model>
-    <path>Aircraft/Stiletto/Models/Interior/Panel/Instruments/empty/petitvide.xml</path>
+    <path>Aircraft/Stiletto/Models/Interior/Panel/Instruments/empty/empty.xml</path>
     <offsets>
-      <x-m> -0.186 </x-m>
-      <y-m> -0.112 </y-m>
-      <z-m>  0.171 </z-m>
+      <x-m> -0.190 </x-m>
+      <y-m> -0.262 </y-m>
+      <z-m>  0.176 </z-m>
     </offsets>
   </model>
-
-  <!-- ********************************* -->
+  
   <model>
-    <path>Aircraft/Stiletto/Models/Interior/Panel/Instruments/empty/petitvide.xml</path>
+    <path>Aircraft/Stiletto/Models/Interior/Panel/Instruments/empty/empty.xml</path>
     <offsets>
-      <x-m> -0.186 </x-m>
-      <y-m> -0.337 </y-m>
-      <z-m>  0.096 </z-m>
+      <x-m> -0.190 </x-m>
+      <y-m> -0.262 </y-m>
+      <z-m>  0.097 </z-m>
     </offsets>
   </model>
-
+  
   <model>
-    <path>Aircraft/Stiletto/Models/Interior/Panel/Instruments/empty/petitvide.xml</path>
+    <path>Aircraft/Stiletto/Models/Interior/Panel/Instruments/empty/empty.xml</path>
     <offsets>
-      <x-m> -0.186 </x-m>
-      <y-m> -0.261 </y-m>
-      <z-m>  0.096 </z-m>
+      <x-m> -0.190 </x-m>
+      <y-m> -0.262 </y-m>
+      <z-m>  0.019 </z-m>
     </offsets>
   </model>
-
+  
+  <!-- FUEL-PRESSURE -->
   <model>
-    <path>Aircraft/Stiletto/Models/Interior/Panel/Instruments/empty/petitvide.xml</path>
+    <path>Aircraft/Stiletto/Models/Interior/Panel/Instruments/fuel/pressure/f-pressure0.xml</path>
     <offsets>
-      <x-m> -0.186 </x-m>
-      <y-m> -0.186 </y-m>
-      <z-m>  0.096 </z-m>
+      <x-m> -0.190 </x-m>
+      <y-m>  0.102 </y-m>
+      <z-m>  0.176 </z-m>
     </offsets>
   </model>
-
+  
   <model>
-    <path>Aircraft/Stiletto/Models/Interior/Panel/Instruments/empty/petitvide.xml</path>
+    <path>Aircraft/Stiletto/Models/Interior/Panel/Instruments/fuel/pressure/f-pressure1.xml</path>
     <offsets>
-      <x-m> -0.186 </x-m>
-      <y-m> -0.112 </y-m>
-      <z-m>  0.096 </z-m>
+      <x-m> -0.190 </x-m>
+      <y-m>  0.182 </y-m>
+      <z-m>  0.176 </z-m>
     </offsets>
   </model>
-
-  <!-- ********************************* -->
+  
   <model>
-    <path>Aircraft/Stiletto/Models/Interior/Panel/Instruments/empty/petitvide.xml</path>
+    <path>Aircraft/Stiletto/Models/Interior/Panel/Instruments/fuel/pressure/f-pressure0.xml</path>
     <offsets>
-      <x-m> -0.186 </x-m>
-      <y-m> -0.337 </y-m>
-      <z-m>  0.021 </z-m>
+      <x-m> -0.190 </x-m>
+      <y-m>  0.102 </y-m>
+      <z-m>  0.097 </z-m>
     </offsets>
   </model>
-
+  
   <model>
-    <path>Aircraft/Stiletto/Models/Interior/Panel/Instruments/empty/petitvide.xml</path>
+    <path>Aircraft/Stiletto/Models/Interior/Panel/Instruments/fuel/pressure/f-pressure1.xml</path>
     <offsets>
-      <x-m> -0.186 </x-m>
-      <y-m> -0.261 </y-m>
-      <z-m>  0.021 </z-m>
+      <x-m> -0.190 </x-m>
+      <y-m>  0.182 </y-m>
+      <z-m>  0.097 </z-m>
     </offsets>
   </model>
-
+  
+  <!-- FUEL-QUANTITY -->
   <model>
-    <path>Aircraft/Stiletto/Models/Interior/Panel/Instruments/empty/petitvide.xml</path>
+    <path>Aircraft/Stiletto/Models/Interior/Panel/Instruments/fuel/quantity/f-quantity0.xml</path>
     <offsets>
-      <x-m> -0.186 </x-m>
-      <y-m> -0.186 </y-m>
-      <z-m>  0.021 </z-m>
+      <x-m> -0.190 </x-m>
+      <y-m>  0.262 </y-m>
+      <z-m>  0.176 </z-m>
     </offsets>
   </model>
-
+  
   <model>
-    <path>Aircraft/Stiletto/Models/Interior/Panel/Instruments/empty/petitvide.xml</path>
+    <path>Aircraft/Stiletto/Models/Interior/Panel/Instruments/fuel/quantity/f-quantity1.xml</path>
     <offsets>
-      <x-m> -0.186 </x-m>
-      <y-m> -0.112 </y-m>
-      <z-m>  0.021 </z-m>
+      <x-m> -0.190 </x-m>
+      <y-m>  0.340 </y-m>
+      <z-m>  0.176 </z-m>
     </offsets>
   </model>
-
-  <!-- -->
-  <!-- ********************************* -->
+  
+  <!-- FUEL-FLOW -->
   <model>
-    <path>Aircraft/Stiletto/Models/Interior/Panel/Instruments/empty/petitvide.xml</path>
+    <path>Aircraft/Stiletto/Models/Interior/Panel/Instruments/fuel/flow/f-flow0.xml</path>
     <offsets>
-      <x-m> -0.186 </x-m>
-      <y-m>  0.337 </y-m>
-      <z-m>  0.171 </z-m>
+      <x-m> -0.190 </x-m>
+      <y-m>  0.262 </y-m>
+      <z-m>  0.097 </z-m>
     </offsets>
   </model>
-
+  
   <model>
-    <path>Aircraft/Stiletto/Models/Interior/Panel/Instruments/empty/petitvide.xml</path>
+    <path>Aircraft/Stiletto/Models/Interior/Panel/Instruments/fuel/flow/f-flow1.xml</path>
     <offsets>
-      <x-m> -0.186 </x-m>
-      <y-m>  0.261 </y-m>
-      <z-m>  0.171 </z-m>
+      <x-m> -0.190 </x-m>
+      <y-m>  0.340 </y-m>
+      <z-m>  0.097 </z-m>
     </offsets>
   </model>
-
+  
   <model>
-    <path>Aircraft/Stiletto/Models/Interior/Panel/Instruments/empty/petitvide.xml</path>
+    <path>Aircraft/Stiletto/Models/Interior/Panel/Instruments/fuel/flow/f-flow0.xml</path>
     <offsets>
-      <x-m> -0.186 </x-m>
-      <y-m>  0.186 </y-m>
-      <z-m>  0.171 </z-m>
+      <x-m> -0.190 </x-m>
+      <y-m>  0.262 </y-m>
+      <z-m>  0.019</z-m>
     </offsets>
   </model>
-
+  
   <model>
-    <path>Aircraft/Stiletto/Models/Interior/Panel/Instruments/empty/petitvide.xml</path>
+    <path>Aircraft/Stiletto/Models/Interior/Panel/Instruments/fuel/flow/f-flow1.xml</path>
     <offsets>
-      <x-m> -0.186 </x-m>
-      <y-m>  0.112 </y-m>
-      <z-m>  0.171 </z-m>
+      <x-m> -0.190 </x-m>
+      <y-m>  0.340 </y-m>
+      <z-m>  0.019 </z-m>
     </offsets>
   </model>
-
-  <!-- ********************************* -->
+  
+  <!-- OIL-PRESSURE -->
   <model>
-    <path>Aircraft/Stiletto/Models/Interior/Panel/Instruments/empty/petitvide.xml</path>
+    <path>Aircraft/Stiletto/Models/Interior/Panel/Instruments/oil/o-pressure/o-pressure0.xml</path>
     <offsets>
-      <x-m> -0.186 </x-m>
-      <y-m>  0.337 </y-m>
-      <z-m>  0.096 </z-m>
+      <x-m> -0.190 </x-m>
+      <y-m>  0.102 </y-m>
+      <z-m>  0.019 </z-m>
     </offsets>
   </model>
-
+  
   <model>
-    <path>Aircraft/Stiletto/Models/Interior/Panel/Instruments/empty/petitvide.xml</path>
+    <path>Aircraft/Stiletto/Models/Interior/Panel/Instruments/oil/o-pressure/o-pressure1.xml</path>
     <offsets>
-      <x-m> -0.186 </x-m>
-      <y-m>  0.261 </y-m>
-      <z-m>  0.096 </z-m>
+      <x-m> -0.190 </x-m>
+      <y-m>  0.182 </y-m>
+      <z-m>  0.019 </z-m>
     </offsets>
   </model>
-
+  
+  <!-- EGT -->
   <model>
-    <path>Aircraft/Stiletto/Models/Interior/Panel/Instruments/empty/petitvide.xml</path>
+    <path>Aircraft/Stiletto/Models/Interior/Panel/Instruments/egt/egt0.xml</path>
     <offsets>
-      <x-m> -0.186 </x-m>
-      <y-m>  0.186 </y-m>
-      <z-m>  0.096 </z-m>
+      <x-m> -0.190 </x-m>
+      <y-m> -0.182 </y-m>
+      <z-m>  0.176 </z-m>
     </offsets>
   </model>
-
+  
   <model>
-    <path>Aircraft/Stiletto/Models/Interior/Panel/Instruments/empty/petitvide.xml</path>
+    <path>Aircraft/Stiletto/Models/Interior/Panel/Instruments/egt/egt1.xml</path>
     <offsets>
-      <x-m> -0.186 </x-m>
-      <y-m>  0.112 </y-m>
-      <z-m>  0.096 </z-m>
+      <x-m> -0.190 </x-m>
+      <y-m> -0.102 </y-m>
+      <z-m>  0.176 </z-m>
     </offsets>
   </model>
-
-  <!-- ********************************* -->
+  
+  <!-- N2 -->
   <model>
-    <path>Aircraft/Stiletto/Models/Interior/Panel/Instruments/empty/petitvide.xml</path>
+    <path>Aircraft/Stiletto/Models/Interior/Panel/Instruments/n2/n2-0.xml</path>
     <offsets>
-      <x-m> -0.186 </x-m>
-      <y-m>  0.337 </y-m>
-      <z-m>  0.021 </z-m>
+      <x-m> -0.190 </x-m>
+      <y-m> -0.182 </y-m>
+      <z-m>  0.097 </z-m>
     </offsets>
   </model>
-
+  
   <model>
-    <path>Aircraft/Stiletto/Models/Interior/Panel/Instruments/empty/petitvide.xml</path>
+    <path>Aircraft/Stiletto/Models/Interior/Panel/Instruments/n2/n2-1.xml</path>
     <offsets>
-      <x-m> -0.186 </x-m>
-      <y-m>  0.261 </y-m>
-      <z-m>  0.021 </z-m>
+      <x-m> -0.190 </x-m>
+      <y-m> -0.102 </y-m>
+      <z-m>  0.097 </z-m>
     </offsets>
   </model>
-
+  
+  <!-- OIL-TEMPERATURE -->
   <model>
-    <path>Aircraft/Stiletto/Models/Interior/Panel/Instruments/empty/petitvide.xml</path>
+    <path>Aircraft/Stiletto/Models/Interior/Panel/Instruments/oil/o-temp/o-temp0.xml</path>
     <offsets>
-      <x-m> -0.186 </x-m>
-      <y-m>  0.186 </y-m>
-      <z-m>  0.021 </z-m>
+      <x-m> -0.190 </x-m>
+      <y-m> -0.182 </y-m>
+      <z-m>  0.019 </z-m>
     </offsets>
   </model>
-
+  
   <model>
-    <path>Aircraft/Stiletto/Models/Interior/Panel/Instruments/empty/petitvide.xml</path>
+    <path>Aircraft/Stiletto/Models/Interior/Panel/Instruments/oil/o-temp/o-temp1.xml</path>
     <offsets>
-      <x-m> -0.186 </x-m>
-      <y-m>  0.112 </y-m>
-      <z-m>  0.021 </z-m>
+      <x-m> -0.190 </x-m>
+      <y-m> -0.102 </y-m>
+      <z-m>  0.019 </z-m>
     </offsets>
   </model>
 
+  <!-- Divers -->  
+  <model>
+    <path>Aircraft/Stiletto/Models/Interior/Panel/Instruments/divers/divers1.xml</path>
+    <offsets>
+      <x-m> -0.190 </x-m>
+      <y-m> -0.102 </y-m>
+      <z-m> -0.061 </z-m>
+    </offsets>
+  </model>
+  
+  <model>
+    <path>Aircraft/Stiletto/Models/Interior/Panel/Instruments/divers/divers2.xml</path>
+    <offsets>
+      <x-m> -0.190 </x-m>
+      <y-m>  0.102 </y-m>
+      <z-m> -0.061 </z-m>
+    </offsets>
+  </model>
+  
+  <model>
+    <path>Aircraft/Stiletto/Models/Interior/Panel/Instruments/divers/divers3.xml</path>
+    <offsets>
+      <x-m> -0.190 </x-m>
+      <y-m>  0.182 </y-m>
+      <z-m> -0.061 </z-m>
+    </offsets>
+  </model>
+  
+  <model>
+    <path>Aircraft/Stiletto/Models/Interior/Panel/Instruments/divers/divers4.xml</path>
+    <offsets>
+      <x-m> -0.190 </x-m>
+      <y-m>  0.262 </y-m>
+      <z-m> -0.061 </z-m>
+    </offsets>
+  </model>
+  
+  <model>
+    <path>Aircraft/Stiletto/Models/Interior/Panel/Instruments/divers/divers5.xml</path>
+    <offsets>
+      <x-m> -0.189 </x-m>
+      <y-m>  0.000 </y-m>
+      <z-m>  0.172 </z-m>
+    </offsets>
+  </model>
+  
+  <model>
+    <path>Aircraft/Stiletto/Models/Interior/Panel/Instruments/divers/divers6.xml</path>
+    <offsets>
+      <x-m> -0.190 </x-m>
+      <y-m> -0.346 </y-m>
+      <z-m> -0.042 </z-m>
+    </offsets>
+  </model>
+  
+  <model>
+    <path>Aircraft/Stiletto/Models/Interior/Panel/Instruments/divers/divers6.xml</path>
+    <offsets>
+      <x-m> -0.190 </x-m>
+      <y-m>  0.346 </y-m>
+      <z-m> -0.042 </z-m>
+    </offsets>
+  </model>
+  
+  <model>
+    <path>Aircraft/Stiletto/Models/Interior/Panel/Instruments/divers/divers7.xml</path>
+    <offsets>
+      <x-m> -0.190 </x-m>
+      <y-m> -0.310 </y-m>
+      <z-m>  0.238 </z-m>
+    </offsets>
+  </model>
+  
+  <model>
+    <path>Aircraft/Stiletto/Models/Interior/Panel/Instruments/divers/divers8.xml</path>
+    <offsets>
+      <x-m> -0.190 </x-m>
+      <y-m>  0.293 </y-m>
+      <z-m>  0.246 </z-m>
+    </offsets>
+  </model>
+  
 </PropertyList>

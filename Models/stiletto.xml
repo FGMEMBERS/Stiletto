@@ -1,9 +1,14 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="ISO-8859-1"?>
 
 <PropertyList>
 
   <path>stiletto.ac</path>
 
+  <!-- MP sound call -->
+  <sound>
+    <path>Aircraft/Stiletto/Sounds/mp-sound.xml</path>
+  </sound>
+  
   <nasal>
     <load>
       var livery_update = aircraft.livery_update.new("Aircraft/Stiletto/Models/Liveries", 10);
@@ -13,9 +18,9 @@
       var float_0 = self.getNode("sim/multiplay/generic/float[0]", 1);
       var float_1 = self.getNode("sim/multiplay/generic/float[1]", 1);
       
-      var crew_door = self.getNode("instrumentation/doors/crew/position-norm", 1);
-      var passenger_door = self.getNode("instrumentation/doors/passenger/position-norm", 1);
-    
+      var crew_door = self.getNode("sim/model/door-positions/crew/position-norm", 1);
+      var passenger_door = self.getNode("sim/model/door-positions/passenger/position-norm", 1);
+      
       crew_door.alias(float_0);
       passenger_door.alias(float_1);
     </load>
@@ -100,35 +105,11 @@
     <property-base>sim/model/livery</property-base>
     <texture-prop>texture</texture-prop>
     <texture>texture.png</texture>
-<!--
-    <diffuse>
-      <red-prop>diffuse/red</red-prop>
-      <green-prop>diffuse/green</green-prop>
-      <blue-prop>diffuse/blue</blue-prop>
-    </diffuse>
-
-    <ambient>
-      <red-prop>ambient/red</red-prop>
-      <green-prop>ambient/green</green-prop>
-      <blue-prop>ambient/blue</blue-prop>
-    </ambient>
--->
-    <specular>
-      <red-prop>specular/red</red-prop>
-      <green-prop>specular/green</green-prop>
-      <blue-prop>specular/blue</blue-prop>
-    </specular>
-
     <emission>
       <red-prop>emission/red</red-prop>
       <green-prop>emission/green</green-prop>
       <blue-prop>emission/blue</blue-prop>
     </emission>
-<!--
-    <shininess>
-      <shininess-prop>shininess</shininess-prop>
-    </shininess>
--->
   </animation>
 
   <effect>
@@ -154,28 +135,38 @@
     <object-name>sorties</object-name> 
   </effect>
 
-  <animation>
-    <type>shader</type>
-    <shader>chrome</shader>
-    <texture>Aircraft/Generic/Effects/glass_shader.png</texture>
+  <!-- working for Rembrandt -->
+  <effect>
+    <inherits-from>Aircraft/Stiletto/Models/Effects/Glass/glass</inherits-from>
     <object-name>vitres</object-name>
-  </animation>
-
-  <animation>
-    <type>noshadow</type>
+  </effect>
+  
+  <!-- working for Rembrandt -->
+  <effect>
+    <inherits-from>Effects/model-transparent</inherits-from>
     <object-name>vitres</object-name>
-  </animation>
-
+  </effect>
+  
   <!-- Une ombre pour OSG  -->
   <model>
-    <name>shadowOSG</name>
     <path>Aircraft/Stiletto/Models/shadow.xml</path>
+    <offsets>
+      <x-m>  0.0 </x-m>
+      <y-m>  0.0 </y-m>
+      <z-m> -1.6 </z-m>
+    </offsets>
   </model>
 
+  <!-- Interieur -->
+  <model>
+    <usage>interior</usage>
+    <path>Aircraft/Stiletto/Models/Interior/interior.xml</path>
+  </model>
+  
   <!-- Les flammes -->
   <!-- Gauche -->
   <model>
-    <path>Aircraft/Stiletto/Models/Effects/flammes/flammesG.xml</path>
+    <path>Aircraft/Stiletto/Models/Effects/flammes/combustionL.xml</path>
     <offsets>
       <x-m>  6.057 </x-m>
       <y-m> -0.455 </y-m>
@@ -185,7 +176,7 @@
 
   <!-- Droite -->
   <model>
-    <path>Aircraft/Stiletto/Models/Effects/flammes/flammesD.xml</path>
+    <path>Aircraft/Stiletto/Models/Effects/flammes/combustionR.xml</path>
     <offsets>
       <x-m>  6.057 </x-m>
       <y-m>  0.455 </y-m>
@@ -214,7 +205,7 @@
   </model>
 
   <model>
-    <path>Aircraft/Alphajet/Models/Effects/tiptrail/tiptrail.xml</path>
+    <path>Aircraft/Stiletto/Models/Effects/tiptrail/tiptrail.xml</path>
     <offsets>
       <x-m>  3.830 </x-m>
       <y-m> -3.365 </y-m>
@@ -242,7 +233,7 @@
   </model>
 
   <model>
-    <path>Aircraft/Alphajet/Models/Effects/tiptrail/tiptrail.xml</path>
+    <path>Aircraft/Stiletto/Models/Effects/tiptrail/tiptrail.xml</path>
     <offsets>
       <x-m>  3.830 </x-m>
       <y-m>  3.365 </y-m>
@@ -281,16 +272,6 @@
     </offsets>
   </model>
 
-  <!-- Interieur -->
-  <model>
-    <path>Aircraft/Stiletto/Models/Interior/interior.xml</path>
-    <offsets>
-      <x-m> 0 </x-m>
-      <y-m> 0 </y-m>
-      <z-m> 0 </z-m>
-    </offsets>
-  </model>
-
   <!-- Gouverne de profondeur -->
   <animation>
     <type>rotate</type>
@@ -316,12 +297,12 @@
     <property>surface-positions/rudder-pos-norm</property>
     <factor> -30 </factor>
     <axis>
-      <x1-m> 9.292 </x1-m>
-      <y1-m> 0.000 </y1-m>
-      <z1-m> 0.530 </z1-m>
-      <x2-m> 9.797 </x2-m>
-      <y2-m> 0.000 </y2-m>
-      <z2-m> 1.563 </z2-m>
+      <x1-m> 9.31702 </x1-m>
+      <y1-m> 0.00000 </y1-m>
+      <z1-m> 0.52949 </z1-m>
+      <x2-m> 9.81012 </x2-m>
+      <y2-m> 0.00000 </y2-m>
+      <z2-m> 1.56251 </z2-m>
     </axis>
   </animation>
 
@@ -331,15 +312,13 @@
     <object-name>aileronG</object-name>
     <property>surface-positions/left-aileron-pos-norm</property>
     <factor> 15 </factor>
-    <center>
-      <x-m>  3.514 </x-m>
-      <y-m> -2.911 </y-m>
-      <z-m> -0.692 </z-m>
-    </center>
     <axis>
-      <x> 0 </x>
-      <y> 1 </y>
-      <z> 0 </z>
+      <x1-m>  3.52131 </x1-m>
+      <y1-m> -3.42616 </y1-m>
+      <z1-m> -0.69189 </z1-m>
+      <x2-m>  3.52228 </x2-m>
+      <y2-m> -2.45622 </y2-m>
+      <z2-m> -0.69189 </z2-m>
     </axis>
   </animation>
 
@@ -348,15 +327,13 @@
     <object-name>aileronD</object-name>
     <property>surface-positions/right-aileron-pos-norm</property>
     <factor> 15 </factor>
-    <center>
-      <x-m>  3.514 </x-m>
-      <y-m>  2.911 </y-m>
-      <z-m> -0.692 </z-m>
-    </center>
     <axis>
-      <x> 0 </x>
-      <y> 1 </y>
-      <z> 0 </z>
+      <x1-m>  3.52228 </x1-m>
+      <y1-m>  2.45622 </y1-m>
+      <z1-m> -0.69189 </z1-m>
+      <x2-m>  3.52131 </x2-m>
+      <y2-m>  3.42616 </y2-m>
+      <z2-m> -0.69189 </z2-m>
     </axis>
   </animation>
 
@@ -395,13 +372,36 @@
     </axis>
   </animation>
 
-  <!-- Rentrée des roues -->
-  <!-- Roue avant -->
+  <!-- Spoiler -->
   <animation>
     <type>rotate</type>
+    <object-name>dessus</object-name>
+    <property>surface-positions/spoiler-pos-norm</property>
+    <factor> 40 </factor>
+    <center>
+      <x-m> 0.414 </x-m>
+      <y-m> 0.000 </y-m>
+      <z-m> 0.397 </z-m>
+    </center>
+    <axis>
+      <x> 0 </x>
+      <y> 1 </y>
+      <z> 0 </z>
+    </axis>
+  </animation>
+  
+  <!-- Rentrée des roues -->
+  <!-- Train avant -->
+  <animation>
+    <name>TrainAvant</name>
     <object-name>axeA</object-name>
     <object-name>axeB</object-name>
     <object-name>roueA</object-name>
+  </animation>
+  
+  <animation>
+    <type>rotate</type>
+    <object-name>TrainAvant</object-name>
     <property>gear/gear[0]/position-norm</property>
     <interpolation>
       <entry><ind> 0 </ind><dep> 100 </dep></entry>
@@ -419,17 +419,21 @@
     </axis>
   </animation>
 
-  <!-- Roue gauche -->
-<!--
+  <!-- Train gauche -->
   <animation>
-    <type>rotate</type>
+    <name>TrainGauche</name>
     <object-name>axeGH</object-name>
     <object-name>axeGB</object-name>
     <object-name>roueG</object-name>
+  </animation>
+  
+  <animation>
+    <type>rotate</type>
+    <object-name>TrainGauche</object-name>
     <property>gear/gear[1]/position-norm</property>
     <interpolation>
-      <entry><ind> 0 </ind><dep> 74.421 </dep></entry>
-      <entry><ind> 1 </ind><dep>  0.000 </dep></entry>
+      <entry><ind> 0 </ind><dep> 90 </dep></entry>
+      <entry><ind> 1 </ind><dep>  0 </dep></entry>
     </interpolation>
     <center>
       <x-m>  2.186 </x-m>
@@ -437,21 +441,40 @@
       <z-m> -0.879 </z-m>
     </center>
     <axis>
-      <x> 1 </x>
-      <y> 0 </y>
+      <x> 0 </x>
+      <y> 1 </y>
       <z> 0 </z>
     </axis>
   </animation>
-
+  
   <animation>
     <type>rotate</type>
-    <object-name>axeGH</object-name>
-    <object-name>axeGB</object-name>
-    <object-name>roueG</object-name>
+    <object-name>TrainGauche</object-name>
     <property>gear/gear[1]/position-norm</property>
     <interpolation>
-      <entry><ind> 0 </ind><dep> 12.7 </dep></entry>
-      <entry><ind> 1 </ind><dep>  0.0 </dep></entry>
+      <entry><ind> 0 </ind><dep> -90 </dep></entry>
+      <entry><ind> 1 </ind><dep>   0 </dep></entry>
+    </interpolation>
+    <center>
+      <x-m>  2.186 </x-m>
+      <y-m> -0.699 </y-m>
+      <z-m> -0.879 </z-m>
+    </center>
+    <axis>
+      <x> 0 </x>
+      <y> 0 </y>
+      <z> 1 </z>
+    </axis>
+  </animation>
+  
+  <animation>
+    <type>rotate</type>
+    <object-name>TrainGauche</object-name>
+    <property>gear/gear[1]/position-norm</property>
+    <interpolation>
+      <entry><ind> 0.0 </ind><dep> 25 </dep></entry>
+      <entry><ind> 0.6 </ind><dep> 25 </dep></entry>
+      <entry><ind> 1.0 </ind><dep>  0 </dep></entry>
     </interpolation>
     <center>
       <x-m>  2.186 </x-m>
@@ -465,19 +488,45 @@
     </axis>
   </animation>
 
+  <!-- Train gauche -->
+  <animation>
+    <name>TrainDroit</name>
+    <object-name>axeDH</object-name>
+    <object-name>axeDB</object-name>
+    <object-name>roueD</object-name>
+  </animation>
+  
   <animation>
     <type>rotate</type>
-    <object-name>axeGH</object-name>
-    <object-name>axeGB</object-name>
-    <object-name>roueG</object-name>
-    <property>gear/gear[1]/position-norm</property>
+    <object-name>TrainDroit</object-name>
+    <property>gear/gear[2]/position-norm</property>
     <interpolation>
-      <entry><ind> 0 </ind><dep> 128.256 </dep></entry>
-      <entry><ind> 1 </ind><dep>   0.000 </dep></entry>
+      <entry><ind> 0 </ind><dep> 90 </dep></entry>
+      <entry><ind> 1 </ind><dep>  0 </dep></entry>
     </interpolation>
     <center>
       <x-m>  2.186 </x-m>
-      <y-m> -0.699 </y-m>
+      <y-m>  0.699 </y-m>
+      <z-m> -0.879 </z-m>
+    </center>
+    <axis>
+      <x> 0 </x>
+      <y> 1 </y>
+      <z> 0 </z>
+    </axis>
+  </animation>
+  
+  <animation>
+    <type>rotate</type>
+    <object-name>TrainDroit</object-name>
+    <property>gear/gear[2]/position-norm</property>
+    <interpolation>
+      <entry><ind> 0 </ind><dep> 90 </dep></entry>
+      <entry><ind> 1 </ind><dep>  0 </dep></entry>
+    </interpolation>
+    <center>
+      <x-m>  2.186 </x-m>
+      <y-m>  0.699 </y-m>
       <z-m> -0.879 </z-m>
     </center>
     <axis>
@@ -486,26 +535,28 @@
       <z> 1 </z>
     </axis>
   </animation>
--->
-  <!-- Rentré des roues Temporairement disparition/apparition des roues -->
+  
   <animation>
-    <type>select</type>
-    <object-name>axeGH</object-name>
-    <object-name>axeGB</object-name>
-    <object-name>roueG</object-name>
-    <object-name>axeDH</object-name>
-    <object-name>axeDB</object-name>
-    <object-name>roueD</object-name>
-    <condition>
-      <not>
-        <equals>
-          <property>gear/gear[0]/position-norm</property>
-          <value>0</value>
-        </equals>
-      </not>
-    </condition>
+    <type>rotate</type>
+    <object-name>TrainDroit</object-name>
+    <property>gear/gear[2]/position-norm</property>
+    <interpolation>
+      <entry><ind> 0.0 </ind><dep> 25 </dep></entry>
+      <entry><ind> 0.6 </ind><dep> 25 </dep></entry>
+      <entry><ind> 1.0 </ind><dep>  0 </dep></entry>
+    </interpolation>
+    <center>
+      <x-m>  2.186 </x-m>
+      <y-m>  0.699 </y-m>
+      <z-m> -0.879 </z-m>
+    </center>
+    <axis>
+      <x> 0 </x>
+      <y> 1 </y>
+      <z> 0 </z>
+    </axis>
   </animation>
-
+  
   <!-- Fermeture des portes des trains -->
   <animation>
     <type>rotate</type>
@@ -716,27 +767,28 @@
 
   <!-- Canopy et autre-->
   <animation>
-    <type>rotate</type>
-    <object-name>dessus</object-name>
-    <property>instrumentation/doors/crew/position-norm</property>
-    <factor> 40 </factor>
-    <center>
-      <x-m> 0.414 </x-m>
-      <y-m> 0.000 </y-m>
-      <z-m> 0.397 </z-m>
-    </center>
-    <axis>
-      <x> 0 </x>
-      <y> 1 </y>
-      <z> 0 </z>
-    </axis>
+    <type>pick</type>
+    <object-name>trappe</object-name>
+    <visible>true</visible>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+      <binding>
+        <command>nasal</command>
+        <script>doors.crew.toggle();</script>
+      </binding>
+    </action>
   </animation>
-
+  
   <animation>
     <type>rotate</type>
     <object-name>trappe</object-name>
-    <property>instrumentation/doors/crew/position-norm</property>
-    <factor> -100 </factor>
+    <property>sim/model/door-positions/crew/position-norm</property>
+    <interpolation>
+      <entry><ind> 0.0 </ind><dep>    0 </dep></entry>
+      <entry><ind> 0.4 </ind><dep> -100 </dep></entry>
+      <entry><ind> 1.0 </ind><dep> -100 </dep></entry>
+    </interpolation>
     <axis>
       <x1-m> -2.027 </x1-m>
       <y1-m>  0.345 </y1-m>
@@ -749,7 +801,7 @@
 
   <!-- Effets lumineux -->
   <model>
-    <path>Aircraft/Alphajet/Models/light/beacon.xml</path>
+    <path>Aircraft/Stiletto/Models/lights/beacon.xml</path>
     <offsets>
       <x-m> 4.131 </x-m>
       <y-m> 0.000 </y-m>
@@ -758,7 +810,7 @@
   </model>
 
   <model>
-    <path>Aircraft/Alphajet/Models/light/beacon.xml</path>
+    <path>Aircraft/Stiletto/Models/lights/beacon.xml</path>
     <offsets>
       <x-m> -1.664 </x-m>
       <y-m>  0.000 </y-m>
@@ -767,7 +819,7 @@
   </model>
 
   <model>
-    <path>Aircraft/Alphajet/Models/light/RedLight.xml</path>
+    <path>Aircraft/Stiletto/Models/lights/RedLight.xml</path>
     <offsets>
       <x-m>  2.826 </x-m>
       <y-m> -3.415 </y-m>
@@ -776,7 +828,7 @@
   </model>
 
   <model>
-    <path>Aircraft/Alphajet/Models/light/StrobeWhite.xml</path>
+    <path>Aircraft/Stiletto/Models/lights/StrobeLight.xml</path>
     <offsets>
       <x-m>  2.820 </x-m>
       <y-m> -3.415 </y-m>
@@ -785,7 +837,7 @@
   </model>
 
   <model>
-    <path>Aircraft/Alphajet/Models/light/GreenLight.xml</path>
+    <path>Aircraft/Stiletto/Models/lights/GreenLight.xml</path>
     <offsets>
       <x-m>  2.826 </x-m>
       <y-m>  3.415 </y-m>
@@ -794,7 +846,7 @@
   </model>
 
   <model>
-    <path>Aircraft/Alphajet/Models/light/StrobeWhite.xml</path>
+    <path>Aircraft/Stiletto/Models/lights/StrobeLight.xml</path>
     <offsets>
       <x-m>  2.820 </x-m>
       <y-m>  3.415 </y-m>
@@ -803,4 +855,3 @@
   </model>
 
 </PropertyList>
-
