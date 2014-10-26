@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<PropertyList>
+
+  <path>divers1.ac</path>
+
+  <animation>
+    <object-name>fond</object-name>
+    <object-name>visses</object-name>
+    <object-name>value0</object-name>
+    <object-name>value1</object-name>
+    <object-name>value2</object-name>
+    <object-name>molette</object-name>
+    
+  </animation>
+
+</PropertyList>
