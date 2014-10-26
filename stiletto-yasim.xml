@@ -1,43 +1,55 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="ISO-8859-1"?>
 
-<!-- Douglas X3 yasim config -->
-<!-- Correction par AJ merci à lui -->
+<!-- Douglas X3 Stiletto : Correction par AJ Thank to him
+                Revision : BARANGER Emmanuel (10.2014)
+                
+     source              : http://en.wikipedia.org/wiki/Douglas_X-3_Stiletto
 
-<!-- Masse a vide : 7310 kg -->
-<airplane mass="16120">
+     Wingspan            :    22 ft 8 in (  6.9 m    )
+     Lenght              :    66 ft 9 in ( 20.3 m    )
+     Height              :    12 ft 6 in (  3.8 m    )
+     Empty mass          : 16120 lb      ( 7310 kg   )
+     Engines             : 2 x Westinghouse J34 afterburning turbojet (3370 lbf - 4850 lbf with afterburning)
+     Maximum speed       : 607.4 kt      ( 1125 km/h )
+-->
+<airplane mass="16120" version="YASIM_VERSION_CURRENT">
 
   <!-- Approach configuration -->
-  <approach speed="200" aoa="8" fuel="0.2">
+  <approach speed="150" aoa="2" fuel="0.3">
     <control-setting axis="/controls/engines/engine[0]/throttle" value="0.5"/>
     <control-setting axis="/controls/engines/engine[1]/throttle" value="0.5"/>
-    <control-setting axis="/controls/flight/flaps" value="1.0"/>
+    <control-setting axis="/controls/flight/flaps" value="1"/>
     <control-setting axis="/controls/gear/gear-down" value="1"/>
   </approach>
 
   <!-- Cruise configuration -->
-  <cruise speed="700" alt="30000" fuel="0.8">
+  <cruise speed="500" alt="0" fuel="0.8">
     <control-setting axis="/controls/engines/engine[0]/throttle" value="0.7"/>
     <control-setting axis="/controls/engines/engine[1]/throttle" value="0.7"/>
-    <control-setting axis="/controls/flight/flaps" value="0.0"/>
+    <control-setting axis="/controls/flight/flaps" value="0"/>
     <control-setting axis="/controls/gear/gear-down" value="0"/>
   </cruise>
 
   <cockpit x="2.545" y="0.0" z="0.046"/>
 
-  <fuselage ax="9.396" ay="0" az="-0.482" bx="-10.168" by="0" bz="0.312" width="2" taper="0.15" midpoint="0.5"/>
+  <fuselage ax=" 9.396" ay=" 0.00" az="-0.482" bx=" -0.386" by=" 0.00" bz="-0.384" width="1.5" taper="0.15" midpoint="1"/>
+  <fuselage ax="-0.386" ay=" 0.00" az="-0.384" bx="-10.168" by=" 0.00" bz=" 0.312" width="1.5" taper="0.15" midpoint="0"/>
 
-  <wing x="-2.837" y="0.956" z="-0.695" 
-        length="2.472" 
-        taper="0.46" 
-        incidence="0.0" 
-        chord="2.730" 
-        sweep="10" 
-        dihedral="0.0" 
-        camber="0.2">
-        <stall aoa="20" width="3" peak="1.3"/>
-        <flap0 start="0" end="0.6" lift="1.5" drag="1.3"/>
-        <flap1 start="0.6" end="1.00" lift="1.3" drag="1.3"/>
-
+  <!-- engines -->  
+  <fuselage ax="-0.386" ay=" 0.66" az="-0.600" bx=" -6.075" by=" 0.66" bz="-0.600" width="0.6" taper="1.00" midpoint="0"/>
+  <fuselage ax="-0.386" ay="-0.66" az="-0.600" bx=" -6.075" by="-0.66" bz="-0.600" width="0.6" taper="1.00" midpoint="0"/>
+  
+  <wing x="-2.700" y="0" z="-0.695" 
+        chord="3.2" 
+        length="3.5" 
+        taper="0.40" 
+        sweep="9.5" 
+        camber="0.02">
+        <stall aoa="22" width="1" peak="1.3"/>
+        <flap0 start="0.3" end="0.7" lift="1.3" drag="1.5"/>
+        <flap1 start="0.7" end="1.0" lift="1.3" drag="1.1"/>
+        <spoiler start="0.2" end="0.8"  lift="0.8" drag="6"/>
+        
         <control-input axis="/controls/flight/flaps" control="FLAP0"/>
         <control-input axis="/controls/flight/aileron" control="FLAP1" split="true"/>
         <control-input axis="/controls/flight/aileron-trim" control="FLAP1" split="true"/>
@@ -45,26 +57,25 @@
         <control-output control="FLAP0" side="left" prop="/surface-positions/left-flap-pos-norm"/>
         <control-output control="FLAP0" side="right" prop="/surface-positions/right-flap-pos-norm"/>
         <control-output control="FLAP0" prop="/surface-positions/flap-pos-norm"/>
-
+        <control-input  control="SPOILER" axis="/controls/flight/spoilers"/>
+        
         <control-output control="FLAP1" side="left" prop="/surface-positions/left-aileron-pos-norm"/>
         <control-output control="FLAP1" side="right" prop="/surface-positions/right-aileron-pos-norm"/>
         <control-output control="FLAP1" prop="/surface-positions/aileron-pos-norm"/>
-
+        <control-output control="SPOILER" prop="/surface-positions/spoiler-pos-norm" invert="true" />
+        
         <control-speed control="FLAP0" transition-time="10"/>
         <control-speed control="FLAP1" transition-time="0.5"/>
-
+        <control-speed control="SPOILER" transition-time="3"/>
   </wing>
 
   <hstab x="-8.673" y="0.232" z="0.269" 
-         taper="0.44" 
-         length="1.900" 
          chord="1.325" 
-         sweep="10" 
-         effectiveness="2.5"
-         dihedral="0.0" 
-         camber="0">
-         <stall aoa="25" width="4" peak="1.3"/>
-         <flap0 start="0" end="1" lift="1.35" drag="1.3"/>
+         length="1.9" 
+         taper="0.44" 
+         sweep="10">
+         <stall aoa="18" width="1" peak="1.5"/>
+         <flap0 start="0" end="1" lift="1.3" drag="1.1"/>
          <control-input axis="/controls/flight/elevator" control="FLAP0" square="false"/>
          <control-input axis="/controls/flight/elevator-trim" control="FLAP0"/>
 
@@ -76,13 +87,12 @@
   </hstab>
 
   <vstab x="-9.063" y="0" z="0.517" 
-         taper="0.4" 
+         chord="1.7" 
          length="1.6" 
-         chord="1.380" 
-         effectiveness="9"
+         taper="0.4" 
          sweep="30">
-         <stall aoa="16" width="5" peak="1.5"/>
-         <flap0 start="0" end="0.64" lift="1.25" drag="1.2"/>
+         <stall aoa="18" width="1" peak="1.5"/>
+         <flap0 start="0" end="0.7" lift="1.2" drag="1.1"/>
 
          <control-input axis="/controls/flight/rudder" control="FLAP0" invert="true"/>
          <control-input axis="/controls/flight/rudder-trim" control="FLAP0" invert="true"/>
@@ -92,11 +102,17 @@
          <control-speed control="FLAP0" transition-time="1"/>
   </vstab>
  
-  <!-- 2 x Westinghouse J-34s 3370 lbs -> PC 4900 lbs-->
+  <!-- Engines   source            : http://en.wikipedia.org/wiki/Westinghouse_J34
+
+                 name              : Westinghouse J34
+                 type              : Turbojet
+                 power cruise      : 5000 lbf at 12300 rpm at sea level for takeoff
+                 weight            : 1207 lb ( 547.5 kg )
+  -->
   <jet x="-2.162" y="0.420" z="-0.370" 
-       mass="2118" 
+       mass="1207" 
        thrust="3370" 
-       afterburner="4900">
+       afterburner="4850">
        <actionpt x="-6.105" y="0.420" z="-0.513"/>
        <control-input axis="/controls/engines/engine[0]/throttle" control="THROTTLE"/>
        <control-input axis="/controls/engines/engine[0]/throttle" src0="0.88" dst0="0.0" src1="1.0" dst1="1.0" control="REHEAT"/>
@@ -105,16 +121,16 @@
   </jet>
 
   <jet x="-2.162" y="-0.420" z="-0.370" 
-       mass="2118" 
+       mass="1207" 
        thrust="3370" 
-       afterburner="4900">
+       afterburner="4850">
        <actionpt x="-6.105" y="-0.420" z="-0.513"/>
        <control-input axis="/controls/engines/engine[1]/throttle" control="THROTTLE"/>
        <control-input axis="/controls/engines/engine[1]/throttle" src0="0.88" dst0="0.0" src1="1.0" dst1="1.0" control="REHEAT"/>
 
        <control-output control="REHEAT" prop="engines/engine[1]/afterburner"/>
   </jet>
-
+ 
   <!-- nose -->
   <gear x="3.748" y="0.000" z="-1.940"
         retract-time="7"
@@ -124,9 +140,9 @@
         <control-input axis="/controls/flight/rudder" control="STEER" square="false"/>
         <control-input axis="/controls/gear/gear-down" control="EXTEND"/>
 
-        <control-speed control="EXTEND" transition-time="7"/>
-
         <control-output control="EXTEND" prop="/gear/gear[0]/position-norm"/>
+
+        <control-speed control="EXTEND" transition-time="7"/>
   </gear>
 
   <!-- left main -->
@@ -138,9 +154,9 @@
         <control-input axis="/controls/gear/brake-parking" control="BRAKE"/>
         <control-input axis="/controls/gear/gear-down" control="EXTEND"/>
 
-        <control-speed control="EXTEND" transition-time="7"/>
-
         <control-output control="EXTEND" prop="gear/gear[1]/position-norm"/>
+        
+        <control-speed control="EXTEND" transition-time="7"/>
   </gear>
 
   <!-- right main -->
@@ -153,18 +169,37 @@
         <control-input axis="/controls/gear/brake-parking" control="BRAKE"/>
         <control-input axis="/controls/gear/gear-down" control="EXTEND"/>
 
-        <control-speed control="EXTEND" transition-time="7"/>
-
         <control-output control="EXTEND" prop="gear/gear[2]/position-norm"/>
+
+        <control-speed control="EXTEND" transition-time="7"/>
   </gear>
 
-  <!-- tank x="0" y="0" z="0" capacity="0"/ -->
-  <tank x="2.8" y="0.0" z="0.0" jet="true" capacity="6922"/>
+  <!-- For retract test 
+  <gear x="3.748" y="0.000" z="-2.5"
+        compression="0.44"
+        spring="1.1"
+        damp="1.4">
+  </gear>
+  <gear x="-2.186" y="0.937" z="-2.5"
+        compression="0.72"
+        spring="0.85" damp="2">
+  </gear>
+  <gear x="-2.186" y="-0.937" z="-2.5"
+        compression="0.72"
+        spring="0.85"
+        damp="2">
+  </gear>
+  -->
+  
+  <!-- Forward Fuel Tank -->
+  <tank x=" 0.6" y="0" z="-1.0" jet="true" capacity="6922"/>
+  <!-- AFT Fuel Tank -->
+  <tank x="-6.6" y="0" z=" 0.3" jet="true" capacity="6922"/>
 
   <!-- Pilote -->
-  <weight x="2.545" y="0.0" z="0.0" size="0.18" mass-prop="sim/weight[0]/weight-lb"/>
+  <weight x="2.545" y="0" z="0" size="0.18" mass-prop="sim/weight[0]/weight-lb"/>
 
-  <!-- CG middle of chord x=-2.839 y=0.0 z=-0.692
-  <ballast x="-20" y="0" z="-8.88" mass="1000"/ -->
+  <!-- Mass displacement -->
+  <ballast x="5" y="0" z="-1" mass="1400"/>
 
 </airplane>
