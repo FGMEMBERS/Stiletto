@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<PropertyList>
+
+  <title>Douglas X 3 Stiletto</title>
+  <line>________________________</line>
+  <!--
+  <key>
+    <name>}</name>
+    <desc>Start engine</desc>
+  </key>
+  -->
+  <key>
+    <name>d</name>
+    <desc>Open/Close canopy</desc>
+  </key>
+  
+</PropertyList>
