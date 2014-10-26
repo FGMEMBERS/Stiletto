@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<PropertyList>
+
+  <path>divers2.ac</path>
+
+  <animation>
+    <object-name>fond</object-name>
+    <object-name>visses</object-name>
+    <object-name>base</object-name>
+    <object-name>Switch1</object-name>
+    <object-name>Switch2</object-name>
+    
+  </animation>
+
+</PropertyList>
